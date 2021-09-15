@@ -1,0 +1,81 @@
+*{
+  margin:0;
+  padding:0;
+}
+body {
+    background:url(../images/istockphoto-825778252-612x612.jpg); /*se puede usar el nombre de color*/
+    background-repeat: repeat; /*para que no repita*/
+    background-position: center;
+    color:#FFF; /*esta vez en hexadecimal*/
+    font-size: 29px;
+}
+header, main, footer{ /*para que los 3 bloques principales tengan las mismas medidas*/
+  width:90%;
+  max-width: 90%;
+  margin:20px auto;
+}
+.logotipoCabecera{
+  float: left;
+}
+header nav{
+  clear:both;
+  background: Orange;
+  display: flex; /*para que funcione el espaciado de los elementos en linea*/
+  justifY-content: space-evenly;
+}
+header nav ul{
+  list-style: none;
+}
+header nav ul a{
+  display:inline-block;
+  padding: 10px 20px;
+}
+header nav ul a:hover{
+  background-color: red;
+}
+h1, h2, h3 {
+  /*clear:both; */ /* si se le quita esto ya no se centra el texto */
+  color: green;
+  background-color: yellow;
+  text-align: center;
+}
+h2{
+  font-size: 200%;
+  font-style: oblique;
+}
+
+/* main layout*/
+main{
+    /*no hace falta clear xq no hay float antes*/
+    display: flex; /*al hacerlo con flex permitirá que todos los box de dentro tengan la misma altura*/
+}
+
+article{
+/*  flex:4; */
+  width: 78.5%;
+  margin-right: 1.5%;
+  padding:2%;
+  float:left;
+  background-color: grey;
+}
+aside{
+  float: right;
+  /*width: 20%; no hace falta xq main es un flex que hace que se autoajusten*/
+  color: green;
+  background-color: pink;
+  padding-left: 2%;
+}
+
+footer{
+  clear: both; /*para limpiar el float del main*/
+  display:flex; /* sino no fuciona el space-evenly*/
+  justify-content: space-evenly;
+  background-color: grey;
+}
+
+.marelo{
+  color:yellow;
+}
+.fondoMarelo{
+  background-color: yellow;
+}
